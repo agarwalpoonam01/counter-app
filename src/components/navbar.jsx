@@ -3,7 +3,7 @@ const NavBar = ({totalCounters}) => {
 return ( 
     <nav className="navbar navbar-light bg-light">
         <a className="navbar-brand" href="#">
-            Non-Zero distinct components <span className="badge badge-pill badge-secondary">{totalCounters}</span>
+            Number of different item selected <span className="badge badge-pill badge-secondary">{totalCounters}</span>
         </a>
 </nav> );
 }

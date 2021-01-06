@@ -4,6 +4,7 @@ class Counter extends Component {
        
         return (
         <React.Fragment>
+            <span className="p-2 mb-2 bg-white text-black">{this.addItem()}</span>
             <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
             <button onClick={() => { this.props.onIncrement(this.props.counter)}} className="btn btn-info btn-sm">Increment</button>
             <button onClick={() => {this.props.onDecrement(this.props.counter)}} className="btn btn-dark btn-sm m-2">Decrement</button>
@@ -20,6 +21,11 @@ class Counter extends Component {
     formatCount(){
         let { value } = this.props.counter
         return value === 0 ? 'Zero' : value
+        
+    }
+    addItem(){
+        //let { value } = this.props.counter
+        return 'Item number ' + this.props.counter.id + ":"
         
     }
 }
